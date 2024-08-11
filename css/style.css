@@ -1,0 +1,370 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* position: relative; */
+}
+
+.logo{
+    width: 250px;
+}
+body{
+    max-width: 1024px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-areas: 
+    "header-cell"
+    "nav-cell"
+    "main-cell"
+    "footer-cell";
+    
+}
+header{
+    grid-area: header-cell;
+    margin-bottom: 2px;
+    height: 138px;
+    /* background-image: url("/img/header.jpg"); */
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+}
+nav {
+    grid-area: nav-cell;
+    background-color: #6829d6;
+    padding: 10px;
+    opacity: 0.9;
+    text-align: center;
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+    
+}
+nav li a{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+}
+nav li a:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+nav li {
+    display: inline-block;
+    padding: 5px 16px;
+}
+main{
+    grid-area: main-cell;
+    /* margin: 0 10%; */
+    border: 1px solid #ccc7c8;
+    border-radius: 5px;
+
+}
+
+.slideshow{
+    width: 100% !important;
+    display: inline-block;
+    /* position: fixed; */
+}
+.mySlides{
+    width: 100%;
+}
+
+.thong_tin{
+    margin: 15px 0;
+    display: flex;
+    justify-items: center;
+
+}
+.thong_tin li{
+    text-transform: capitalize;
+    list-style: none;
+    margin: 10px 0;
+    font-size: 20px;
+    position: relative;
+    /* left: 40%; */
+    
+}
+.thong_tin li a{
+    text-decoration: none;
+    color: black;
+}
+.thong_tin p{
+    text-align: justify;
+    display: inline-block;
+    font-size: 18px;
+    margin: 15px;
+}
+
+h1{
+    margin: 12px 0;
+    color: blueviolet;
+    text-align: center;
+    text-transform: uppercase;
+}
+.content{
+    display: inline-block;
+    width: 50%;
+}
+h1::after{
+    text-align: center;
+    content: " ";
+    position: relative;
+    left: 50%;
+    display: block;
+    width: 280px;
+    height: 3px;
+    transform: skewX(-12deg) translateX(-50%);
+    background: radial-gradient(#cddc39, #fff);
+}
+footer{
+    height: 150px;
+    background-color: aqua;
+}
+
+.fix{
+    margin-left: 12px;
+}
+
+.list-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item{
+    flex: 0 0 28%;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 2%;
+    margin: 2% 2%;
+    box-sizing: border-box;
+}
+
+.name-item {
+    color: red;
+    margin: 5px 10px;
+    text-transform: capitalize;
+}
+
+.video-item video{
+    width: 99%;
+    margin: 5px 0;
+    height: 200px;
+}
+.dis-item h3{
+    color: black;
+    margin: 5px 0;
+
+}
+
+.foot-item a{
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.ptxt{
+    font-size: 20px;
+    line-height: 35px;
+    margin-left: 5%;
+    
+}
+
+.ptxt a{
+    text-decoration: none;
+    color: red;
+}
+
+.chitiet {
+    margin-left: 3%;
+    line-height: 2.3;
+    font-size: 18px;
+}
+
+
+ul.chitiet{
+    list-style-type: ' - ';
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.info > ul{
+    list-style-type: ' - ';
+}
+
+ul.xet-tuyen{
+    list-style: ' + ';
+    margin: 0 25px;
+}
+
+p.ptxt{
+    font-size: 25px;
+    font-weight: 1000;
+    color: #4d25c7;
+    margin-left: -3%;
+}
+
+p.sup-ptxt{
+    font-size: 18px;
+    font-weight: 600;
+    /* color: #fff; */
+}
+
+.main-ptxt{
+    line-height: 32px;
+    font-size: 21px;
+    margin-left: 5%;
+}
+
+.main-ptxt h1{
+    font-size: 32px;
+}
+
+
+
+
+/* thame bot chat */
+.main-bot{
+    background-color: aqua;
+    width: 450px;
+    height: 100%;
+    border: 1px;
+    border-radius: 2%;
+    display: none;
+    position: fixed;
+    right: 10px;
+    z-index: 5;
+}
+
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blue;
+    padding: 12px;
+    border: 1px;
+    border-radius: 3%;
+
+}
+  
+.header p {
+    margin: 0; /* Xóa margin mặc định của <p> */
+    font-size: 20px;
+}
+  
+.fa {
+    /* Đảm bảo các biểu tượng có kích thước như mong muốn */
+    font-size: 24px;
+    /* Có thể thay đổi kích thước tùy thuộc vào nhu cầu của bạn */
+}
+
+.chat-container{
+    margin-top: 12px;
+    max-height: 85vh;
+    overflow-y: scroll;
+}  
+  .chat-item {
+    margin-bottom: 10px;
+    clear: both;
+  }
+  
+  .sent {
+    float: right;
+  }
+  
+  .received {
+    float: left;
+  }
+  
+  .img-u {
+    width: 40px;
+    height: auto;
+    border-radius: 50%; /* để hình ảnh hình tròn */
+    margin-right: 10px; /* khoảng cách giữa hình ảnh và tin nhắn */
+  }
+  
+  .message {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #DCF8C6;
+    margin-right: 10px;
+  }
+  
+  .sent .message {
+    background-color: #8e9a85;
+  }
+  
+  .received .message {
+    background-color: #E8E8E8;
+  }
+  
+  
+  .box{
+    display: inline-flex;
+  }
+
+
+.box-input{
+    display: inline-flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3px;
+    left: 3px;
+}
+
+.c{
+    padding: 5px 10px;
+}
+
+textarea{
+    resize: none;
+    box-sizing: border-box;
+    border: 1px;
+    border-radius: 2%;
+    vertical-align: middle;
+    height: 50px;
+}
+
+button#btn_send {
+    margin-left: 10px;
+    padding: 0 10px;
+}
+
+.chat{
+  padding: 10px;
+}
+
+.chat-icon{
+  width: 55px;
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  z-index: 100;
+}
+
+  .center-button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 70%;
+    margin-left: 40%;
+    /* top: 0; */
+    /* right: 0; */
+    /* left: 0; */
+  }
+  
+  button#nologin {
+    padding: 12px 24px; /* Điều chỉnh padding cho button */
+    font-size: 16px; /* Điều chỉnh kích thước font chữ */
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff; /* Màu nền của button */
+    color: #fff; /* Màu chữ */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hiệu ứng transition */
+  }
+  
+  button#nologin:hover {
+    background-color: #0056b3; /* Màu nền của button khi hover */
+  }
